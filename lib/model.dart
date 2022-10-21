@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Classe {
   final TimeOfDay horaInici;
   final int minuts;
