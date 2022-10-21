@@ -115,6 +115,7 @@ class _HorariState extends State<Horari> {
   }
 }
 
+
 class HorariController {
   final List<TimeOfDay> horesClasse = [
     for (int i = 0; i < (HorariModel().nSessions); i++)
