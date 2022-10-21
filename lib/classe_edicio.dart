@@ -48,6 +48,7 @@ class _ClaseEditPageState extends State<ClaseEditPage> {
                 Expanded(
                   flex: 1,
                   child: TextFormField(
+                    initialValue: widget._controller.modulo,
                     decoration: const InputDecoration(label: Text("Codi")),
                     onSaved: (valor) => widget._controller.modulo = valor,
                     validator: (valor) {
@@ -60,6 +61,7 @@ class _ClaseEditPageState extends State<ClaseEditPage> {
                 Expanded(
                   flex: 4,
                   child: TextFormField(
+                    initialValue: widget._controller.moduloDescripcion,
                     decoration: const InputDecoration(
                       label: Text("Nom mòdul"),
                     ),
@@ -73,12 +75,14 @@ class _ClaseEditPageState extends State<ClaseEditPage> {
               children: [
                 Expanded(
                   child: TextFormField(
+                    initialValue: widget._controller.grupo,
                     decoration: const InputDecoration(label: Text("Grup")),
                     onSaved: (valor) => widget._controller.grupo = valor,
                   ),
                 ),
                 Expanded(
                   child: TextFormField(
+                    initialValue: widget._controller.aula,
                     decoration: const InputDecoration(
                       label: Text("Aula"),
                     ),
@@ -88,6 +92,7 @@ class _ClaseEditPageState extends State<ClaseEditPage> {
               ],
             ),
             TextFormField(
+              initialValue: (widget._controller.minutos??60).toString(),
               decoration: const InputDecoration(
                 label: Text("Duració (minuts)"),
               ),
@@ -102,6 +107,7 @@ class _ClaseEditPageState extends State<ClaseEditPage> {
                   widget._controller.minutos = int.parse(valor ?? "60"),
             ),
             FormField<Color>(
+              initialValue: widget._controller.color,
               builder: (formFieldState) {
                 return ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: formFieldState.value),
